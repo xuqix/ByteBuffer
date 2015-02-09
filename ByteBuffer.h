@@ -294,14 +294,14 @@ template <typename V, typename... Args>
 ByteBuffer& ByteBuffer::_package(V &v, Args &...args)
 {
     *this << v;
-    return package(args...);
+    return _package(args...);
 }
 
 template <typename V, typename... Args>
 ByteBuffer& ByteBuffer::_unpacked(V &v, Args &...args)
 {
     *this >> v;
-    return unpacked(args...);
+    return _unpacked(args...);
 }
 
 template <typename V>

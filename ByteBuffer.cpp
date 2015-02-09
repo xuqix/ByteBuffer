@@ -77,7 +77,7 @@ void ByteBuffer::clear()
 
 std::vector<uint8_t> ByteBuffer::getBuffer()
 {
-    return std::move(_buf);
+    return _buf;
 }
 
 bool ByteBuffer::equals(const ByteBuffer &other)
